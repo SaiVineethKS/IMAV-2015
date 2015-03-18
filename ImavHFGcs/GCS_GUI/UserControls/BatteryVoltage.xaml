@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="HighFlyers.UserControls.BatteryVoltage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="180">
+    <Grid Name="gridBackground">
+        <TextBlock FontFamily="Arial" FontSize="14" FontStretch="Normal" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Margin="85,20,0,34" Name="voltageTextBlock" Text="BATTERY VOLTAGE" Width="72" TextWrapping="Wrap" />
+        <TextBlock FontFamily="Arial" FontSize="22" FontStretch="Normal" FontWeight="Bold" Foreground="White" Height="24" HorizontalAlignment="Left" Margin="85,60,0,0" Name="valueTextBlock" Text="0V" TextAlignment="Center" VerticalAlignment="Top" Width="72" />
+        <DockPanel Margin="40,0,0,10" Height="80" Width="25" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <DockPanel.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="#FFBABABA" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </DockPanel.Background>
+        </DockPanel>
+        <DockPanel Margin="40,0,0,10" Height="0" Width="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Name="levelDockPanel" Background="#FFBA5454">
+        </DockPanel>
+        <Label Content="12" FlowDirection="RightToLeft" Foreground="White" Height="28" HorizontalAlignment="Left" Name="maxValueLabel" VerticalAlignment="Top" Width="34" />
+        <Label Content="0" FlowDirection="RightToLeft" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="0,72,0,0" Name="minvalueLabel" VerticalAlignment="Top" Width="34" />
+    </Grid>
+</UserControl>

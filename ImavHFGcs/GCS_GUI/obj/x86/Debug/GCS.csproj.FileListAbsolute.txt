@@ -1,0 +1,40 @@
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\WPF_test.exe
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\WPF_test.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\Emgu.CV.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\Emgu.CV.UI.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\Emgu.Util.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\AltitudeIndicator.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\BatteryVoltage.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\Camera.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\App.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\AltitudeIndicator.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\MainWindow.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\BatteryVoltage.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\Camera.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\App.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\WPF_test_MarkupCompile.cache
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\WPF_test_MarkupCompile.lref
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\MainWindow.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\WPF_test.g.resources
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\HighFlyers.Properties.Resources.resources
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\WPF_test.exe
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\WPF_test.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\Algorithms.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\Algorithms.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\ExpressionDark.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\QRCodeControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\UserControls\QRCodeControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Debug\HF GCS.exe.config
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\CustomExpression1.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\Mission\MissionControls\DummyControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\Mission\MissionControls\ReleaseBallControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\Mission\MissionControls\QRCodeControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\Mission\MissionControls\DummyControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\Mission\MissionControls\ReleaseBallControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\Mission\MissionControls\QRCodeControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\HF GCS_MarkupCompile.cache
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Debug\HF GCS_MarkupCompile.lref

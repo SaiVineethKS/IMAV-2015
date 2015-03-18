@@ -1,0 +1,384 @@
+﻿<Window x:Class="HighFlyers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:zedgraph="clr-namespace:ZedGraph;assembly=ZedGraph"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="HF GCS" Height="762" Width="1160" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" WindowStartupLocation="Manual" ResizeMode="CanResizeWithGrip" AllowsTransparency="False" Opacity="1" WindowState="Maximized" Icon="/HF GCS;component/Images/quadro.ico" xmlns:userctrl="clr-namespace:HighFlyers.UserControls" Closing="Window_Closing">
+    <Grid Opacity="1" Background="#FF444444" x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="430"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <GridSplitter Grid.Column="1" Grid.RowSpan="2"  Width="5" HorizontalAlignment="Stretch"/>
+        <TabControl Grid.Column="0" Name="tabControl1" Grid.RowSpan="2" Panel.ZIndex="1">      
+            <TabItem Header="Devices" Name="devicesTabItem">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Camera" HorizontalAlignment="Stretch"  Name="configurationGroupBox" VerticalAlignment="Stretch"  Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox x:Name="cameraListComboBox" Margin="5" Height="23" SelectionChanged="cameraListComboBox_SelectionChanged" Grid.Row="0" Grid.Column="0" />
+                            <CheckBox x:Name="showLinesCheckBox" Margin="10" Content="Show drift trace" Checked="showLinesCheckBox_StateChanged" Unchecked="showLinesCheckBox_StateChanged" Grid.Row="0" Grid.Column="1"/>
+                            <Button x:Name="startStopDrift" Margin="5" Height="23" Content="Reset drift" Click="startStopDrift_Click" Grid.Row="0" Grid.Column="2"/>
+                            <Button x:Name="cameraButton" Margin="5"  Height="23" Content="Open camera" Click="cameraButton_Click" Grid.Row="1" Grid.Column="0" />
+                            <Button x:Name="imgDebugWindowButton" Margin="5" Height="23" Content="Image Debug Window" Click="imgDebugWindowButton_Click" Grid.Row="1" Grid.Column="1" />
+                            <Button x:Name="clearDriftTraceButton" Margin="5" Height="23"  Content="Clear all points" Grid.Row="1" Grid.Column="2" Click="clearDriftTraceButton_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Communication" Grid.Row="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="rsGroupBox">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox  Height="23" Name="ListofPortsComboBox"  Margin="5" SelectionChanged="ListofPortsComboBox_SelectionChanged" Grid.Row="0" Grid.Column="0"/>
+                            <Button  Content="Connect" Height="23" Name="ConnectPortButton" Margin="5" Click="OpenPortButton_Click" Grid.Row="0" Grid.Column="1"/>
+                            <Button  Content="Rescan" Height="23" Name="searchButton"  Margin="5" Click="searchButton_Click" Grid.Row="0" Grid.Column="2"/>
+                            <CheckBox Content="Debug view" Height="16" Name="debugViewCheckBox" Checked="debugViewCheckBox_StateChanged" Unchecked="debugViewCheckBox_StateChanged" Margin="5" Grid.Row="1" Grid.Column="1"/>
+                            <Button Content="Clear view" Height="23" Name="clearDebugViewButton" Margin="5" Click="clearDebugViewButton_Click" Grid.Row="1" Grid.Column="2"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" Header="Send Command" x:Name="commandGroupBox">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="2" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ComboBox Height="23" Name="commandComboBox" Grid.Column="0" Margin="5" Grid.ColumnSpan="2" />
+                            <Button  Content="Send" Height="58" Name="SendButton"  Click="SendButton_Click" Grid.Column="2" Grid.RowSpan="3" Margin="5" />
+                            <TextBox Grid.Column="0"  Name="commandValueTextBox" Grid.Row="2" Height="23" Margin="5"/>               
+                            <WrapPanel Grid.Row="2" Grid.Column="1">
+                                <RadioButton Content="INT" Height="16" HorizontalAlignment="Left" Margin="8" Name="INTRadioButton" VerticalAlignment="Top" IsThreeState="False" IsChecked="False" />
+                                <RadioButton Content="FLOAT" Height="16" HorizontalAlignment="Left" Margin="8" Name="FLOATRadioButton" VerticalAlignment="Top" IsThreeState="False" IsChecked="False" />
+                            </WrapPanel>
+                        </Grid>
+                    </GroupBox>
+                        <ListView  Name="CommandsListView" Grid.Row="3" ItemsSource="{Binding FramesCollection}">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Command}" Width="250" Header="Received Command" />
+                                    <GridViewColumn DisplayMemberBinding="{Binding ValueFloat}" Width="150" Header="Value"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    <Grid Grid.Row="4" Height="30">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Command filter: "  Margin="5"/>
+                        <TextBox Grid.Column="1"  Name="FilterCommand" Margin="5"/>
+                        <Button Grid.Column="2" Content="Clear filter"  Name="ClearFilterCommand" Margin="5" Click="ClearFilterCommand_Click" />
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <GridSplitter Grid.Column="1" Grid.RowSpan="2"  Width="4" HorizontalAlignment="Stretch"/>
+                        <GroupBox Header="Received" HorizontalAlignment="Stretch"  Name="receivingGroupBox" VerticalAlignment="Stretch"  Grid.Row="0">
+                            <RichTextBox Name="ReceiveRichTextBox" IsReadOnly="True"></RichTextBox>
+                        </GroupBox>
+                        <GroupBox Header="Sent" HorizontalAlignment="Stretch"  Name="sendingGroupBox" VerticalAlignment="Stretch"  Grid.Row="0" Grid.Column="3">
+                            <RichTextBox Name="SendRichTextBox" IsReadOnly="True"></RichTextBox>
+                        </GroupBox>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Mission" Name="missionTabItem">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="300*" />
+                        <RowDefinition Height="200*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Margin="5" Orientation="Horizontal">
+                        <Label Content="Select mission:" Margin="0,0,0,5"/>
+                        <ComboBox x:Name="missionComboBox" Width="150" Margin="5,0,10,0" Height="23"  />
+                        <Button x:Name="startMissionButton" Width="70" Content="START" Margin="0,0,10,0" Height="23" Click="startMissionButton_Click" />
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+                        <Label Content="Current state:" Margin="0,0,10,0"/>
+                        <Label Content="Mission not selected" FontWeight="Bold" x:Name="missionStateLabel" Foreground="Red" Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Margin="5" Orientation="Horizontal">
+                        <Label Content="Current mission:" Margin="0,0,10,0"/>
+                        <Label Content="none" x:Name="currentMissionLabel" Margin="5,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Margin="5" Orientation="Horizontal">
+                        <Label Content="Current frame processing time:" Margin="0,0,10,0"/>
+                        <Label Content="0" x:Name="currentProcessingTimeLabel" Margin="5,0,0,0" />
+                    </StackPanel>
+                    <GroupBox Header="Current mission parameters" Grid.Row="4">
+                        <Grid  Name="missionStackPanel" />
+                    </GroupBox>
+                    <GroupBox Header="Mission history" Grid.Row="5">
+                        <ListView  Name="missionHistoryListView" ItemsSource="{Binding MissionHistoryCollection}">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="100" Header="Mission" DisplayMemberBinding="{Binding MissionTitle}"/>
+                                    <GridViewColumn Width="200" Header="Result" DisplayMemberBinding="{Binding MissionResult}"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Debug" Name="PIDPanel">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="230"/>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                <GroupBox Header="PID"   Margin="10,2,10,107" Name="groupBox1" Grid.RowSpan="2">
+                        <Grid Name="PIDGrid"  Margin="20" Height="167">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ComboBox Grid.Row="0"  Height="23" SelectedValuePath="Content" Margin="5" Name="PIDCombo" Width="120" SelectionChanged="PIDCombo_SelectionChanged" ItemsSource="{Binding}">
+                                <ComboBoxItem Content="AcroRoll" />
+                                <ComboBoxItem Content="AcroPitch" />
+                                <ComboBoxItem Content="AcroYaw" />
+                                <ComboBoxItem Content="StableRoll" />
+                                <ComboBoxItem Content="StablePitch" />
+                                <ComboBoxItem Content="Alt" />
+                                <ComboBoxItem Content="Vel" />
+                            </ComboBox>
+                            <Grid Grid.Row="0" Grid.Column="1" Width="120" Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Kp" Height="24" Margin="5" Name="label1"  />
+                                <TextBox  Height="23" Name="KpText" Grid.Column="1"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Grid.Column="0" Width="120" Margin="5">
+                                <Label Content="Status OK" x:Name="pidReceiveStatusLabel"/>
+                            </Grid>
+                            <Grid Grid.Row="1" Grid.Column="1" Width="120" Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Ki" Height="24" Margin="5" Name="label2"  />
+                                <TextBox  Height="23" Name="KiText" Grid.Column="1"/>
+                            </Grid>
+                            <Grid Grid.Row="2" Grid.Column="1" Width="120" Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Kd" Height="24" Margin="5" Name="label3"  />
+                                <TextBox  Height="23" Name="KdText" Grid.Column="1"/>
+                            </Grid>
+                            <Button Content="Get PID" Height="23"  Margin="5" Name="button1"  Width="120" Click="button1_Click" Grid.Row="2"/>
+                            <Button Content="Send" Grid.Column="1" Height="23"  Margin="5" Name="button2"  Width="120" Click="button2_Click" Grid.Row="3"/>
+                            <Button Content="Save to flash" Height="23" Margin="5" Name="button3" Width="120" Click="button3_Click" Grid.Row="3"/>
+                            <Button Content="To file" Grid.Column="0" Grid.Row="4" Height="23" Name="PidToFile" Width="120" Click="PidToFile_Click" />
+                            <Button Content="From file" Grid.Column="1" Grid.Row="4" Height="23" Name="PidFromFile" Width="120" Click="PidFromFile_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="1" Header="Log to File" Margin="10" Name="groupBox2" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Height="23" Name="logToFileNameTextBox"  Margin="5" Grid.Row="0"/>
+                            <Button Grid.Row="0" Grid.Column="1" Content="..." Height="23" Margin="5" Name="selectFileButton" Click="selectFileButton_Click" />
+                            <Button Grid.Row="1" Content="Start" Height="23" HorizontalAlignment="Left" Margin="5" Name="logStartButton" Width="75" Click="logStartButton_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox  Grid.Row="2" Header="Trims"  Margin="10" Name="groupBox3">
+                      <Grid>
+                          <Grid.RowDefinitions>
+                              <RowDefinition Height="*"/>
+                              <RowDefinition Height="*"/>
+                          </Grid.RowDefinitions>
+                          <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="60"/>
+                              <ColumnDefinition Width="*"/>
+                              <ColumnDefinition Width="100"/>
+                          </Grid.ColumnDefinitions>
+                          <userctrl:NumericUpDown x:Name="numericUpDownTrimPitch"  Height="23" Grid.Row="0" Grid.Column="1" Margin="5"/>
+                            <userctrl:NumericUpDown x:Name="numericUpDownTrimRoll" Height="23" Grid.Row="1" Grid.Column="1" />
+                          <Label Content="Trim pitch"  Margin="5" Name="label4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                          <Label Content="Trim roll" Margin="5" Name="label5"  HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" />
+                          <Button Content="Set from APK" Height="23"  Margin="5" Name="button4" Grid.Row="0" Grid.Column="2" Click="button4_Click" />
+                          <Button Content="Get from Quadro" Height="23" Margin="5" Name="button5" Grid.Row="1" Grid.Column="2"  Click="button5_Click" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox  Grid.Row="3" Header="Trims"  Margin="10" Name="groupBox4">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="Forward" Height="23" Name="forwardTrimButton" Width="75" Grid.Column="1" Click="forwardTrimButton_Click" />
+                            <Button Content="Left" Name="leftTrimButton" Grid.Row="1" Height="23" Width="75" Click="leftTrimButton_Click" />
+                            <Button Content="Right" Name="rightTrimButton" Grid.Row="1" Grid.Column="2" Height="23" Width="75" Click="rightTrimButton_Click" />
+                            <Button Content="Backward" Name="backwardTrimButton" Grid.Row="2" Grid.Column="1" Height="23" Width="75" Click="backwardTrimButton_Click" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Plots" Name="PlotsTab">
+                <Grid Name="PlotGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <WindowsFormsHost Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="windowsFormsHost1" Grid.Row="1">
+                        <zedgraph:ZedGraphControl Dock="Fill" x:Name="graphControl1"></zedgraph:ZedGraphControl>
+                    </WindowsFormsHost>
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="10,5,5,5" Name="plot1ComboBox" VerticalAlignment="Top" Width="200" SelectionChanged="plot1ComboBox_SelectionChanged" Grid.Row="0" />
+                    <WindowsFormsHost Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Name="windowsFormsHost2" Grid.Row="3" >
+                        <zedgraph:ZedGraphControl Dock="Fill" x:Name="graphControl2"></zedgraph:ZedGraphControl>
+                    </WindowsFormsHost>
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="10,5,5,5" Name="plot2ComboBox" VerticalAlignment="Top" Width="200" SelectionChanged="plot1ComboBox_SelectionChanged" Grid.Row="2"/>
+                    <WindowsFormsHost Margin="10,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="windowsFormsHost3" Grid.Row="5">
+                        <zedgraph:ZedGraphControl Dock="Fill" x:Name="graphControl3"></zedgraph:ZedGraphControl>
+                    </WindowsFormsHost>
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="10,5,5,5" Name="plot3ComboBox" VerticalAlignment="Top" Width="200" SelectionChanged="plot1ComboBox_SelectionChanged" Grid.Row="4" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Column="2" Grid.Row="1" Panel.ZIndex="1" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="68"/>
+                <ColumnDefinition Width="102" />
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="engineButton" Margin="10" Click="engineButton_Click">
+                <StackPanel>
+                    <Label Content="Engine" FontWeight="Bold"/>
+                    <Label Content="START" FontWeight="Bold" x:Name="engineLabel" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="takeoffButton" Content="Take off" Margin="10,10,10,52" Grid.Column="1" Click="takeoffButton_Click" Height="38" />
+            <userctrl:AltitudeIndicator  x:Name="altitudeIndicator1" Grid.Column="2" DValue="0" Value="0" Grid.ColumnSpan="2" />
+            <userctrl:BatteryVoltage  HorizontalAlignment="Left" Grid.Column="4" x:Name="batteryVoltage1" VerticalAlignment="Top" Value="0" MaxValue="12.6" MinValue="10.5" />
+            <RichTextBox  Name="logRichTextBox" Margin="4,30,6,0" Foreground="Red" Grid.Column="5" Height="65" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" IsReadOnly="True" />  
+            <TextBox Name="statusTextBox" Margin="85,6,6,0" Grid.Column="5" IsReadOnly="True" VerticalAlignment="Top" Height="20"></TextBox>
+            <Button Content="Reset state" Grid.Column="5" Height="23" HorizontalAlignment="Left" Margin="4,5,0,0" Name="resetSystemStateButton" VerticalAlignment="Top" Width="75" Click="resetSystemStateButton_Click" />
+            <Button Content="Land" Grid.Column="1" Height="38" HorizontalAlignment="Left" Margin="10,52,0,0" Name="button6" VerticalAlignment="Top" Width="80" Click="button6_Click" />
+        </Grid>
+        <userctrl:Camera x:Name="camera1" Grid.Column="2" Grid.ColumnSpan="2" />
+        <Button x:Name="switchCameraButton" Margin="0,0,5,5" Width="100" Height="23" Content="Switch camera" Click="switchCameraButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="3" />
+        <StatusBar Height="23"  Name="statusBar" Grid.Row="2" Grid.ColumnSpan="3" Foreground="White" Background="#FF222222">
+            <StatusBarItem Margin="2,0,0,0">
+                <Ellipse Fill="Red"  StrokeThickness="1" Stroke="Black" Width="18" Height="18" x:Name="IsConnectedIndicator"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Content="Is connected" />
+            </StatusBarItem>
+            <StatusBarItem Margin="2,0,0,0">
+                <Ellipse Fill="Silver"  StrokeThickness="1" Stroke="Black" Width="18" Height="18" x:Name="RxIndicator"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Content="RX" />
+            </StatusBarItem>
+            <StatusBarItem Margin="20,0,0,0">
+                <Ellipse Fill="Silver"  StrokeThickness="1" Stroke="Black" Width="18" Height="18" x:Name="TxIndicator"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Content="TX" />
+            </StatusBarItem>
+            <StatusBarItem Margin="20,0,0,0">
+                <Ellipse Fill="Silver"  StrokeThickness="1" Stroke="Black" Width="18" Height="18" x:Name="RpiStatusIndicator" MouseUp="RpiStatusIndicator_MouseUp" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Content="RPI status code:" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label x:Name="RpiStatusLabel"  Content="unknow" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Margin="15,0,0,0"  Content="Keyboard layout:"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ComboBox Margin="0,0,0,0" Width="120" SelectionChanged="ComboBox_SelectionChanged" x:Name="keycombobox" FontSize="8">
+                </ComboBox>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Content="Current mission: " />
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label Content="none" x:Name="currentMissionNameLabel"/>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right" >
+                <Button Width="100" Height="17" x:Name="ResetDriftPanelButton" Content="Reset drift" Click="startStopDrift_Click" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

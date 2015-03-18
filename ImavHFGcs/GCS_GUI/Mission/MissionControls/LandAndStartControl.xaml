@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="HighFlyers.Mission.MissionControls.LandAndStartControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="310" d:DesignWidth="307">
+    <DockPanel>
+        <Button Content="Waiting For Land Acknowledgement" x:Name="MainButton" Margin="10,10,10,10" Click="MainButton_Click" IsEnabled="False" FontSize="18" FontStretch="Normal" />
+    </DockPanel>
+</UserControl>

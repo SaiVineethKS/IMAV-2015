@@ -1,0 +1,8 @@
+﻿<Window x:Class="HighFlyers.TodoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TodoWindow" Height="320" Width="310" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid x:Name="mainGrid" Background="#FF444444" ShowGridLines="False">
+        
+    </Grid>
+</Window>

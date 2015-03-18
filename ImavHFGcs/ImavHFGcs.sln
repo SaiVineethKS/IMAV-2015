@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCS", "GCS_GUI\GCS.csproj", "{400009B3-4D4C-4849-8B22-FDD185359D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyGCS", "UglyGCS\UglyGCS.csproj", "{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", "Algorithms\Algorithms.vcxproj", "{B9B993E6-8F6B-422E-84E8-E70E43B1398E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{21601CE9-F811-4FEF-AF8F-A63D714B43C7}"
+	ProjectSection(SolutionItems) = preProject
+		ImavHFGcs.vsmdi = ImavHFGcs.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ImavHFGcs.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Debug|Win32.ActiveCfg = Debug|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Debug|x86.ActiveCfg = Debug|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Debug|x86.Build.0 = Debug|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Release|Any CPU.ActiveCfg = Release|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Release|Mixed Platforms.Build.0 = Release|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Release|Win32.ActiveCfg = Release|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Release|x86.ActiveCfg = Release|x86
+		{400009B3-4D4C-4849-8B22-FDD185359D88}.Release|x86.Build.0 = Release|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Debug|Win32.ActiveCfg = Debug|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Debug|x86.ActiveCfg = Debug|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Debug|x86.Build.0 = Debug|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Release|Any CPU.ActiveCfg = Release|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Release|Mixed Platforms.Build.0 = Release|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Release|Win32.ActiveCfg = Release|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Release|x86.ActiveCfg = Release|x86
+		{5DC6671B-4D4E-426A-B7B1-5A8E8B9F38AB}.Release|x86.Build.0 = Release|x86
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Debug|Win32.Build.0 = Debug|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Debug|x86.ActiveCfg = Debug|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Release|Win32.ActiveCfg = Release|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Release|Win32.Build.0 = Release|Win32
+		{B9B993E6-8F6B-422E-84E8-E70E43B1398E}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

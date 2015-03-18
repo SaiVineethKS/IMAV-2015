@@ -1,0 +1,88 @@
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Emgu.CV.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Emgu.CV.UI.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Emgu.Util.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Algorithms.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\ExpressionDark.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\AltitudeIndicator.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\BatteryVoltage.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\Camera.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\App.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\AltitudeIndicator.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\MainWindow.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\BatteryVoltage.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\Camera.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\App.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\MainWindow.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HighFlyers.Properties.Resources.resources
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\ReleaseBallControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\QRCodeControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\ReleaseBallControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\QRCodeControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\HF GCS.exe.config
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\CustomExpression1.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\DummyControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\DummyControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS_MarkupCompile.cache
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS_MarkupCompile.lref
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\HF GCS.exe
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\HF GCS.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\ZedGraph.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS.g.resources
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS.exe
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\LandAndStartControl.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\NumericUpDown.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\LandAndStartControl.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\NumericUpDown.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\TodoWindow.baml
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\TodoWindow.g.cs
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Algorithms.dll
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\HF GCS.exe.config
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS.exe
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS.pdb
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\HF GCS.exe
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\HF GCS.pdb
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Algorithms.dll
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Emgu.CV.dll
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Emgu.CV.UI.dll
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Emgu.Util.dll
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\ZedGraph.dll
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\bin\Release\Algorithms.pdb
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\ExpressionDark.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\CustomExpression1.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\DummyControl.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\LandAndStartControl.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\ReleaseBallControl.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\TodoWindow.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\AltitudeIndicator.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\BatteryVoltage.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\Camera.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\QRCodeControl.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\NumericUpDown.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\App.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\DummyControl.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\LandAndStartControl.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\ReleaseBallControl.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\TodoWindow.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\AltitudeIndicator.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\MainWindow.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\BatteryVoltage.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\Camera.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\Mission\MissionControls\QRCodeControl.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\UserControls\NumericUpDown.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\App.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS_MarkupCompile.cache
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS_MarkupCompile.lref
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\MainWindow.baml
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HF GCS.g.resources
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\HighFlyers.Properties.Resources.resources
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GenerateResource.read.1.tlog
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GenerateResource.write.1.tlog
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GCS.csprojResolveAssemblyReference.cache
+D:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\GCS_GUI\obj\x86\Release\GCS.csproj.GenerateResource.Cache

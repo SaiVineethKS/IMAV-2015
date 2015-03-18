@@ -1,0 +1,8 @@
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\bin\Release\AlgorithmsTest.dll.config
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\bin\Release\AlgorithmsTest.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\bin\Release\AlgorithmsTest.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\bin\Release\Algorithms.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\bin\Release\Algorithms.pdb
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\obj\Release\ResolveAssemblyReference.cache
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\obj\Release\AlgorithmsTest.dll
+E:\Studia\High Flyers\QUADRO_IMAV_2013\trunk\src\ImavHFGcs\AlgorithmsTest\obj\Release\AlgorithmsTest.pdb
